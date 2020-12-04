@@ -20,7 +20,7 @@ body{
 .footer .footer_top{
 	padding: 25px 50px;
 	border-bottom: 2px solid #f5f5f5;
-	display: flex;
+	overflow: hidden;
 }
 
 .footer .footer_down{
@@ -38,6 +38,7 @@ body{
 
 .footer .footer_top .footer_item{
 	padding-left: 50px;
+	float: left;
 }
 
 .footer .footer_top .footer_item.footer_item_1{
@@ -84,4 +85,34 @@ body{
 .footer .footer_top .footer_item .aboutus{
 	font-size: 14px;
 	line-height: 24px;
+}
+
+@media screen and (max-width: 1024px){
+	.footer .footer_top .footer_item{
+		margin-bottom: 25px;
+		padding: 0;
+	}
+	.footer .footer_top .footer_item.footer_item_2,
+	.footer .footer_top .footer_item.footer_item_3{
+		width: 50%;
+	}
+	.footer .footer_top .footer_item.footer_item_1, 
+	.footer .footer_top .footer_item.footer_item_4{
+		width: 100%;
+		float: none;
+	}
+}
+
+@media screen and (max-width: 668px){
+	.footer .footer_down{
+		flex-direction: column;
+	}
+	.footer .footer_down p{
+		margin-bottom: 15px;
+		text-align: center;
+	}
+	.footer .footer_top .footer_item.footer_item_2,
+	.footer .footer_top .footer_item.footer_item_3{
+		width: 100%;
+	}
 }
